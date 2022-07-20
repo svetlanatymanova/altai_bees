@@ -551,12 +551,30 @@ h2 {
 .section-main::after {
   content: "";
   position: absolute;
+  width: 16.75rem;
+  height: 16.75rem;
+  position: absolute;
+  top: 80%;
+  left: 100%;
+  -webkit-transform: translate(-100%, -80%);
+      -ms-transform: translate(-100%, -80%);
+          transform: translate(-100%, -80%);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 16px 0px 0px 16px;
+}
+
+.section-main::before {
+  content: "";
+  position: absolute;
   top: 0;
   right: 0;
   width: 30%;
   height: 100%;
   background-color: #ec7a21;
-  z-index: -1;
 }
 
 .section-main__wrapper {
