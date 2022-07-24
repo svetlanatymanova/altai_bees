@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220723062925">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220725004603">
 	<!--<link rel="shortcut icon" href="favicon.ico">-->
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -442,7 +442,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="main__section-map section-map">
+			<div class="main__section-map section-map">
 				<div class="section-map__container">
 					<div class="section-map__content">
 						<a href="#" class="section-map__logo logo">
@@ -501,13 +501,13 @@
 						</div>
 					</div>
 					<div class="section-map__map">
-						<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5bac63badcf4f9ad124b9a6e1aab656e3257a2d76b6ce4f71be0e817960b6824&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+						<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5bac63badcf4f9ad124b9a6e1aab656e3257a2d76b6ce4f71be0e817960b6824&amp;source=constructor" width="500" height="400"></iframe>
 					</div>
 				</div>
-			</section>
+			</div>
 		</main>
 		<footer class="footer">
-			<header class="header header-footer">
+			<div class="header header-footer">
 				<div class="header__container">
 					<a href="#" class="header__logo logo">
 						<svg>
@@ -528,7 +528,7 @@
 						<div class="header__number">+7 (923) 678-67-68</div>
 					</div>
 				</div>
-			</header>
+			</div>
 			<div class="footer__container">
 				<nav class="footer__links">
 					<a href="#" class="footer__link">Политика конфиденциальности</a>
@@ -549,24 +549,30 @@
 					<div class="popup__subtitle subtitle subtitle-white">Оставьте заявку, мы перезвоним
 						и обсудим детали </div>
 					<form class="popup__form form">
-						<input type="text" class="form__input" placeholder="Ваше имя">
-						<input type="text" class="form__input" placeholder="Номер телефона">
-						<div class="button-with-subtitle">
+						<input type="text" class="form__element form__input" placeholder="Ваше имя">
+						<input class="form__element form__input" type="tel" placeholder="Номер телефона" data-inputmask="'mask': '+7 (999) 999-99-99'" inputmode="numeric">
+						<select name="form__select" class="form__element form__select">
+							<option value="1" selected>Пункт №1</option>
+							<option value="2">Пункт №2</option>
+							<option value="3">Пункт №3</option>
+							<option value="4">Пункт №4</option>
+						</select>
+						<div class="form__element button-with-subtitle">
 							<button class="form__button btn-grad">Заказать</button>
-							<div class="form__checkbox">
-								<input type="checkbox" name="" id="agree">
+							<div class="form__checkbox checkbox">
+								<input type="checkbox" name="agree" id="agree">
 								<label for="agree">Даю согласие на <a href="#">обработку данных</a></label>
 							</div>
 						</div>
 					</form>
 				</div>
 
-				<button data-close type="button" class="popup__close">X</button>
+				<button data-close type="button" class="popup__close"></button>
 
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220723062925"></script>
+	<script src="js/app.min.js?_v=20220725004603"></script>
 </body>
 
 </html>
