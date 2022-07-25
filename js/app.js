@@ -7711,12 +7711,6 @@
         };
         const da = new DynamicAdapt("max");
         da.init();
-        if (1 !== window.devicePixelRatio) {
-            var dpt = window.devicePixelRatio;
-            var widthM = window.screen.width * dpt;
-            var widthH = window.screen.height * dpt;
-            document.write('<meta name="viewport" content="width=' + widthM + ", height=" + widthH + '">');
-        }
         window["FLS"] = true;
         isWebp();
         menuInit();
